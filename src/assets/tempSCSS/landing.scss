@@ -1,0 +1,347 @@
+.floating-icon {
+  position: fixed;
+  bottom: $md;
+  right: $md;
+  flex-direction: column;
+  z-index: 99;
+  .icon-fab {
+    &:hover {
+      cursor: pointer;
+    }
+    &:first-child {
+      background: $secondary-color;
+    }
+    @extend %flex-centered;
+    margin-top: $sm;
+    background: $primary-color;
+    color: $light-color;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+  }
+}
+.home-nav {
+  height: 8vh;
+  padding: 0 $wrapper-val;
+  transition: 0.3s;
+
+  .logo {
+    height: 7vh;
+    width: auto;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  .nav-item {
+    padding: $sm $md;
+    border-radius: $sm;
+    cursor: pointer;
+    &:hover {
+      background: rgba(0, 0, 0, 0.12);
+    }
+  }
+  .menu-bar {
+    display: none;
+  }
+
+  &.scrolled {
+    background: $bg-gradient;
+  }
+  .close-btn {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .close-btn {
+      display: none;
+    }
+    .menu-bar {
+      display: flex;
+    }
+    .nav-items {
+      display: none;
+    }
+    &.open {
+      .nav-items {
+        animation: fadeIn 0.3s ease-in;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: $bg-gradient;
+
+        .nav-item,
+        .btn {
+          font-size: 1.4rem;
+          margin-bottom: 8px;
+        }
+        .close-btn {
+          position: absolute;
+          display: flex;
+          top: 8px;
+          right: 8px;
+          z-index: 91;
+        }
+      }
+    }
+  }
+}
+
+.welcome {
+  padding: 10vh 3vw 5vh;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    filter: grayscale(1);
+    background: url("https://cdn.pixabay.com/photo/2017/04/10/22/28/residence-2219972_1280.jpg") fixed bottom;
+    background-size: cover;
+    opacity: 0.12;
+  }
+}
+
+.welcome,
+.sales-page {
+  //background: url("../../assets/img/background.png");
+
+  .content-area {
+    height: 50vh;
+  }
+  .image-area {
+    border-radius: $md;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.12);
+    height: 70vh;
+    .arrow-buttons {
+      div {
+        cursor: pointer;
+        &:hover {
+          filter: brightness(0.9);
+        }
+      }
+    }
+    img {
+      left: 0;
+      top: 0;
+      height: 100%;
+    }
+    .search-box {
+      //padding-left:7.5vw;
+      .form-group {
+        width: 300px;
+      }
+    }
+    .arrows-area {
+      .dots {
+        display: flex;
+        .dot {
+          height: 10px;
+          width: 10px;
+          background: white;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .search-area {
+    border-radius: 300px;
+    width: 50vw;
+    box-shadow: 2px 16px 16px 4px rgba(0, 0, 0, 0.3);
+    input {
+      outline: none;
+      border: none;
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+
+    i {
+      color: $text-color;
+    }
+  }
+  @media (max-width: 768px) {
+    .search-box {
+      width: 100%;
+    }
+  }
+}
+
+.big-blog-card {
+  width: 100%;
+
+  img {
+    width: 100%;
+    border-radius: $md;
+    height: 400px;
+  }
+
+  @media (max-width: 768px) {
+    .card-image {
+      img {
+        height: 200px;
+      }
+    }
+    .card-details {
+      .category {
+        font-size: 0.8rem;
+      }
+
+      .blog-title {
+        font-size: 1rem;
+      }
+
+      .blog-description {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.mini-blog-card {
+  padding: 0 $sm;
+
+  .card-image {
+    height: 120px;
+    width: 100px;
+
+    img {
+      border-radius: $sm;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card-image {
+      height: 60px;
+      width: 120px;
+
+      image {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .card-details {
+      .title-xs {
+        font-size: 0.8rem;
+      }
+
+      .description {
+        display: none;
+      }
+    }
+  }
+}
+
+.unm-about {
+  .card {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url("https://cdn.pixabay.com/photo/2016/06/24/10/47/architecture-1477041__340.jpg") fixed;
+      background-size: cover;
+      opacity: 0.3;
+      mix-blend-mode: multiply;
+    }
+  }
+  @media (max-width: 768px) {
+    .flex-1 {
+      padding: $md;
+    }
+  }
+}
+
+.hor-blog-card {
+  .card-image {
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: $md;
+    }
+  }
+}
+
+.recent-blogs {
+  .blogs-area {
+    .hor-blog-card {
+      width: 24.5%;
+      margin-bottom: $md;
+
+      .card-image {
+        img {
+          border-radius: $xs;
+        }
+      }
+
+      .card-details {
+        .card-title {
+          display: unset;
+        }
+      }
+
+      &:nth-child(2n) {
+        margin-left: 2%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .blogs-area {
+      .blog-card {
+        width: 100%;
+        margin: 0;
+
+        .description {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.popular-blogs {
+  .blogs-area {
+    .hor-blog-card {
+      width: 23%;
+      margin-right: 2%;
+
+      &:nth-child(4n) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 0;
+    padding-bottom: 0;
+    .title{
+      font-size: 1.6rem;
+    }
+    .blogs-area {
+      .hor-blog-card {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 5vh;
+      }
+    }
+  }
+}

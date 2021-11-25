@@ -1,0 +1,250 @@
+@import "layout";
+
+body {
+  font-family: $title-family;
+  font-size: $body-size;
+}
+
+.card {
+  border-radius: 4px;
+  background: $light-color;
+  padding: $md;
+  box-shadow: $default-shadow;
+}
+
+.form-group {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: $xs $sm;
+  border-radius: 4px;
+  @extend %flex, %column;
+
+  label {
+    font-weight: bold;
+  }
+
+  input,
+  select {
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.title {
+  font-size: 24px;
+}
+
+.sub-title {
+  font-size: 18px;
+}
+
+.btn {
+  padding: $sm $md;
+  border-radius: $sm;
+  background: rgba(0, 0, 0, 0.12);
+  border: none;
+  box-sizing: border-box;
+  color: $text-color;
+  font-family: $title-family;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+
+  &.dark {
+    background: $text-color;
+    color: $light-color;
+  }
+
+  &.primary {
+    background: $primary-color;
+    color: $light-color;
+
+    &:disabled {
+      background: rgb(40, 40, 40);
+      border: 1px solid $primary-color;
+    }
+  }
+
+  &.secondary {
+    background: $secondary-color;
+    color: $light-color;
+  }
+
+  &.light {
+    background: $light-color;
+    color: $primary-color;
+  }
+
+  &.success {
+    background: $success-color;
+    color: $light-color;
+  }
+
+  &.danger {
+    background: $danger-color;
+    color: $light-color;
+  }
+
+  &.info {
+    background: $info-color;
+    color: $light-color;
+  }
+
+  &.warning {
+    background: $warning-color;
+    color: $light-color;
+  }
+
+  &.outlined.primary {
+    border: 1px solid $primary-color;
+    background: transparent;
+    color: $primary-color;
+
+    &:hover {
+      background: $dark-primary;
+      color: $light-color;
+    }
+  }
+
+  &.outlined.secondary {
+    border: 1px solid $secondary-color;
+    background: transparent;
+    color: $secondary-color;
+
+    &:hover {
+      background: $secondary-color;
+      color: $light-color;
+    }
+  }
+
+  &.outlined.light {
+    border: 1px solid $light-color;
+    background: transparent;
+    color: $light-color;
+
+    &:hover {
+      background: $light-color;
+      color: $light-color;
+    }
+  }
+
+  &.outlined.success {
+    border: 1px solid $success-color;
+    background: transparent;
+    color: $success-color;
+
+    &:hover {
+      background: $success-color;
+      color: $light-color;
+    }
+  }
+
+  &.outlined.danger {
+    border: 1px solid $danger-color;
+    background: transparent;
+    color: $danger-color;
+
+    &:hover {
+      background: $danger-color;
+      color: $light-color;
+    }
+  }
+
+  &.outlined.info {
+    border: 1px solid $info-color;
+    background: transparent;
+    color: $info-color;
+
+    &:hover {
+      background: $info-color;
+      color: $light-color;
+    }
+  }
+
+  &.outlined.warning {
+    border: 1px solid $warning-color;
+    background: transparent;
+    color: $warning-color;
+
+    &:hover {
+      background: $warning-color;
+      color: $light-color;
+    }
+  }
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.avatar {
+  background: rgba(0, 0, 0, 0.12);
+  font-weight: bold;
+  height: 40px;
+  width: 40px;
+  @extend %flex-centered;
+  border-radius: 50%;
+}
+
+//nav
+nav {
+  padding: 0 5vw;
+  height: 60px;
+}
+
+.bg-primary {
+  background: $primary-color;
+}
+
+.bg-secondary {
+  background: $secondary-color;
+}
+
+.bg-accent {
+  background: $accent-color;
+}
+
+.bg-dark {
+  background: $dark-primary;
+}
+
+.bg-light {
+  background: $light-color;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+.text-accent {
+  color: $accent-color;
+}
+
+.text-dark {
+  color: $dark-primary;
+}
+
+.text-light {
+  color: $light-color;
+}
+
+.text-primary {
+  color: $primary-color;
+}

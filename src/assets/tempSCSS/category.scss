@@ -1,0 +1,21 @@
+.category{
+  .content-area{
+    .blog-card{
+      width: 49%;
+      &:nth-child(2n){
+        margin-left:2%;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .content-area{
+      .blog-card{
+        width:100%;
+        &:nth-child(2n){
+          margin-left:0;
+        }
+      }
+    }
+
+  }
+}
